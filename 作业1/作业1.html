@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>百度</title>
+</head>
+<style>
+    *{margin:0;padding:0;}
+    .clearfix:after{content: ""; display: block; clear: both; }
+    .clearfix{zoom:1;}
+    
+    
+    
+    /*  导航栏  */
+    .nav{float: right;}
+    .nav>ul{float: left;}
+    .nav>ul>li{float: left;list-style: none;font-size: 14px;font-weight: bold;margin-top: 14px;margin-right: 20px;}
+    .nav>ul>li>a{color:black;display: inline-block}
+    .nav>ul>li>a:hover{color:blue;}
+    .more{display: block;width:60px;height: 24px;background-color: #3388FF;font-size: 12px;text-align: center;line-height: 24px;float: right;margin-top: 8px;margin-right:10px;}
+    .more a{color:white;text-decoration: none;}
+    
+    /*  下拉菜单  */
+    .list{position: absolute;margin-top:5px;margin-left: -20px;border:1px solid #D1D1D1;width:70px;list-style: none;display: none;}
+    
+    .list a{text-decoration: none;font-size: 12px;width:70px; font-weight: normal;display: block;text-align: center;height: 20px;line-height: 20px;color:black;height:25px;line-height: 25px;}
+    
+    .list a:hover{background-color: #38f;color:white;}
+    
+    
+    /*   中间区域   */
+    
+    
+    .middle {margin-top: 130px; text-align: center;width:100%;position: absolute;}
+    
+    
+    input{border: 1px solid #B8B8B8;width:500px;line-height: 34px;padding:0 10px;font-size: 14px;display: block;margin: 47px auto 0;}
+    
+    .search{width:100px;height:36px;font-size: 14px;line-height: 36px;background: #3385FF;float: right;margin-right: 322px;margin-top: -36px;}
+    
+    .middle span a{text-decoration: none;color:white;}
+    
+    
+    .carmer{width:18px;height: 16px;background: url(img/carmer.jpg) center right no-repeat;position: absolute;left:915px;top:142px;
+    }  
+    
+
+    
+    
+    
+    
+    
+    
+    /*  底部  */
+    .bottom {
+	    position: absolute;bottom:50px;width: 100%;
+    }
+    .code {
+        text-align: center;
+        margin: 0 auto;
+    }
+    .code img{width: 60px;height: 60px;margin-bottom: 8px;}
+    .code em{color:#666666;font-size: 12px;font-weight: bold;font-style: normal;text-align: center;margin-bottom: 15px;display: inline-block;}
+    p a,p{text-align: center;font-size: 12px;color:#999999;line-height: 20px;}
+    i img{width:14px;height: 16px;text-align: center;}
+    .nav_list{float: right;margin-top:60px;text-align: center;display: none;}
+    .nav_list img{margin-bottom: 6px;margin-top: 10px;}
+    .nav_list em{font-size: 12px;color:#666666;font-style: normal;font-weight: bold;border-bottom: 1px solid #F0F0F0;}
+</style>
+
+<script>
+    window.onload=function(){
+        var oset=document.getElementById('set');
+        var olist=document.getElementById('list');
+        var ali=olist.getElementsByTagName('li');
+        var aa=ali.getElementsByTagName('a');
+        oset.onmousemove=function(){
+            olist.style.display='block';
+            aa.style.background='blue';
+            aa.style.color='white';
+        }
+        oset.onmouseleave=function(){
+            olist.style.display='none';
+        }
+       
+    }
+</script>
+
+<body>
+    <div class="nav" clearfix>
+        <span class="more" id="more"><a href="#">更多产品</a></span>
+        <ul>
+            <li><a href="#">新闻</a></li>
+            <li><a href="#">hao123</a></li>
+            <li><a href="#">地图</a></li>
+            <li><a href="#">视频</a></li>
+            <li><a href="#">贴吧</a></li>
+            <li><a href="#">学术</a></li>
+            <li><a href="#">登陆</a></li>
+            <li id="set">
+                <a href="#">设置</a>
+                <ul class="list" id="list" >
+                    <li><a href="#">搜索设置</a></li><li><a href="#">高级搜索</a></li><li><a href="#">开启预测</a></li><li><a href="#">搜索历史</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="middle">
+        <div class="image">
+            <a href="#"><img src='img/1.jpg'></a>
+        </div>
+        <div class="in">
+            <input type='text' id="text">
+            <div class="carmer_box">
+                <span class="carmer"></span> 
+            </div>   
+            <div class="search_box" clearfix>
+                <span class="search" id="search"><a href="#">百度一下</a></span>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="code">
+            <div>
+                <img src="img/code.jpg"><br>
+            </div>
+            <em>手机百度</em>
+        </div>
+        <p>
+            <a href="#">把百度设为主页</a>
+            <a href="#">关于百度</a>
+            <a href="#">About Baidu</a>
+            <a href="#">百度推广</a>
+        </p>
+        <p>
+            @2017 Baidu
+            <a href="#">使用百度前必读</a>
+            <a href="#">意见反馈</a>
+            京ICP证030173号
+            <i class="img1"><img src="img/img1.jpg"></i>
+            <a href="#">京公网安备11000002000001号</a>
+            <i class="img2"><img src="img/img2.jpg"></i>
+        </p>
+    </div>
+</body>
+</html>
