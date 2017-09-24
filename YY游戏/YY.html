@@ -1,0 +1,660 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+	body,h3,p,ul{
+		padding:0;
+		margin:0;
+	}
+	ul{
+		list-style:none;
+	}
+	a{
+		text-decoration:none;
+	}
+	img{
+		border:none;
+		vertical-align:top;
+	}
+	.clearfix:after{content: "";display: block; clear: both;}
+    .clearfix{zoom:1;}
+	.box{
+		width:100%;
+		height:100%
+	}
+	.qq{
+		width:1000px;
+		margin:0 auto;
+	}
+	.box-a-a{
+		background:url(img/y1.jpg) left center no-repeat;
+		padding:0 26px 0 39px;
+		float:left;
+		
+	}
+	.box-a-a p{
+		font:16px/18px "微软雅黑";
+		height:18px;
+	}
+	.box-a-a span{
+		font:6px/8px "微软雅黑";
+		height:8px;
+		color:#FFF;
+		background-color:#000;
+		padding:0 7px;
+	}
+	.box-a-b{
+		width:360px;
+		height:41px;
+		background:url(img/y2.jpg) left center no-repeat;
+		float:left;
+	}
+	.box-a-c{
+		float:right;
+	}
+	.box-a-c li{
+		float:left;
+		font:12px/41px "";
+		height:41px;
+		margin-right:11px;
+	}
+	.box-a-c-a{
+		color:#757575;
+	}
+	.box-a-c-b{
+		color:#EC1147;
+		font-family: "微软雅黑";
+		font-weight:bold;
+	}
+	.box2{
+		background-color:#40566D;
+	}
+	.box-b-a{
+		background:url(img/y3.jpg) left center no-repeat;
+		padding-left:48px;
+		float:left;
+		margin-right:71px;
+	}
+	.box-b-a p{
+		font:16px/17px "微软雅黑";
+		color:#FFF;
+	}
+	.box-b-a-a{
+		padding:13px 0 13px;
+	}
+	.box-b-b{
+		float:left;
+	}
+	.box-b-b li{
+		font:12px/60px "微软雅黑";
+		height:60px;
+		margin-right:61px;
+		float:left;
+	}
+	.box-b-b a{
+		color:#FFF;
+	}
+	.box-b-c{
+		padding:14px 63px 14px 0;
+		float:right;
+	}
+	.box-b-c span{
+		display:inline-block;
+		font:12px/32px "微软雅黑";
+		height:32px;
+		padding:0 9px 0 9px;
+		margin-right:12px;
+		background-color:#F00;
+		color:#FFF;
+	}
+	.box3{
+		background-color:#9F6;
+		padding:30px 0 30px;
+	}
+	.box4{
+		background-color:#E0E1E6;
+	}
+	.box5{
+		background-color: #C6C;
+	}
+	.left-c{
+		width:497px;
+		margin-right:6px;
+		background-color:#FFF;
+		float:left;
+	}
+	.left-c-a{
+		width:497px;
+		height:205px;
+		position:relative;
+	}
+	.left-c-a img{
+		width:100%;
+		height:100%;
+	}
+	.left-c-l{
+		width:30px;
+		height:50px;
+		background-color:#000;
+		opacity:.5;
+		position:absolute;
+		left:0;
+		bottom:78px;
+	}
+	.left-c-l i{
+		width:11px;
+		height:18px;
+		display:inline-block;
+		color:#FFF;
+	}
+	.left-c-r{
+		width:30px;
+		height:50px;
+		background-color:#000;
+		opacity:.5;
+		position:absolute;
+		right:0;
+		bottom:78px;
+	}
+	.left-c-b{
+		padding-left:9px;
+	}
+	.left-c-b p{
+		font:16px/40px "微软雅黑";
+		height:40px;
+		background:url(img/y8.jpg) left center no-repeat;
+		padding-left:11px;
+	}
+	.right-c{
+		width:497px;
+		padding-bottom:11px;
+		background-color:#FFF;
+		float:left;
+	}
+	.right-c-a{
+		margin-bottom:8px;
+		border-bottom:1px solid #F00;
+	}
+	.right-c-a li{
+		float:left;
+		margin-left:26px;
+		font:12px/42px "微软雅黑";
+	}
+	.right-c-c{
+		font:14px/38px "微软雅黑";
+		height:38px;
+		padding-left:58px;
+		color:#F00;
+	}
+	.right-c-d{
+		padding-left:23px;
+		font:12px/29px "微软雅黑";
+	}
+	.right-c-e{
+		float:left;
+	}
+	.right-c-e a{
+		color:#C0C0C0;
+	}
+	.right-c-f{
+		float:right;
+		margin-right:24px;
+		color:#BFBFBF;
+	}
+	.box-d-c-w{
+		width:245px;
+		float:left;
+		margin-right:7px;
+		margin-bottom:30px;
+		background-color:#FFF;
+	}
+	.box-d-a{
+		background-color:#FFF;
+		margin-bottom:10px;
+	}
+	.box-d-b{
+		padding:0 17px;
+	}
+	.box-d-b h3{
+		float:left;
+		font: normal 18px/50px "微软雅黑";
+		height:50px;
+	}
+	.box-d-b a{
+		float:right;
+		font:12px/50px "微软雅黑";
+		height:50px;
+		color:#BFBFBF;
+	}
+	.box-d-c-a{
+		width:245px;
+		height:149px;
+		position:relative;
+	}
+	.box-d-c-a img{
+		width:245px;
+		height:149px;
+	}
+	.box-d-c-b{
+		width:100%;
+		height:100%;
+		background-color:#FFF;
+		opacity:.5;
+		filter:alpha(opacity=50);
+		position:absolute;
+		left:0;
+		top:0;
+	}
+	.box-d-c-c{
+		padding:10px 10px 0 10px;
+		font:12px/26px "微软雅黑";
+	}
+	.box-d-left{
+		float:left;
+	}
+	.box-d-right{
+		float:right;
+	}
+	.box-d-left span{
+		float:left;
+		color:#F00;
+		margin-right:9px;
+	}
+	.box-d-left p{
+		float:left;
+	}
+	.box-d-right span{
+		float:left;
+		margin-right:10px;
+	}
+	.box-d-right a{
+		float:left;
+		color:#000;
+	}
+	.box-d-c-d{
+		padding:0 6px;
+		font:12px/34px "微软雅黑";
+	}
+	.box-d-c-d p{
+		float:left;
+		height:34px;
+		background:url(img/y10.jpg) left center no-repeat;
+		padding-left:16px;
+	}
+	.box-d-c-d a{
+		float:right;
+		color:#4C4C4C;
+		height:34px;
+	}
+	.box-d-c{
+		margin-right:-8px;
+	}
+	.box-d-c-p{
+		border-bottom:1px solid #F9C;
+		padding-bottom:9px;
+	}
+	.box-e-a{
+		margin-right:-6px;
+	}
+	.box-e-a .ss{
+		float:left;
+		background-color:#FFF;
+		margin:0 6px 30px 0;
+	}
+	.box-e-b{
+		width:497px;
+	}
+	.box-e-b-a{
+		width:245px;
+	}
+	.box-e-b-b{
+		width:749px;
+	}
+	.box-e-k{
+		width:100%;
+	}
+	.box-e-d{
+		margin:0 10px;
+		border-bottom:1px solid #F9C;
+	}
+	.box-e-d span{
+		font:12px/44px "微软雅黑";
+		height:44px;
+		float:left;
+		color:#F00;
+		margin-left:5px;
+	}
+	.box-e-d p{
+		font:14px/44px "微软雅黑";
+		height:44px;
+		float:left;
+	}
+	.box-e-d a{
+		font:12px/44px "微软雅黑";
+		height:44px;
+		margin-right:2px;
+		float:right;
+	}
+	.box-e-e{
+		padding:5px 13px 5px 5px;
+	}
+	.box-e-e img{
+		width:137px;
+		height:190px;
+		float:left;
+	}
+	.box-e-f{
+		margin-left:150px;
+	}
+	.box-e-f .p1{
+		font:12px/27px "微软雅黑";
+		height:27px;
+	}
+	.box-e-f span{
+		color:#989898;
+	}
+	.box-e-g{
+		font:12px/20px "微软雅黑";
+		margin-top:4px 0 8px;
+	}
+	.box-e-f a{
+		float:right;
+		font:12px/22px "微软雅黑";
+		height:22px;
+	}
+	.box-e-e-a{
+		padding:9px 0 11px;
+		font:12px/36px "微软雅黑";
+	}
+	.box-e-e-a p{
+		height:36px;
+		padding-left:13px;
+	}
+	.box-e-f-b{
+		padding:20px 12px 21px 12px;
+		margin-right:-10px;
+	}
+	.box-e-f-b li{
+		float:left;
+		margin-right:10px;
+	}
+	.box-e-f-b img{
+		width:235px;
+		height:159px;
+	}
+	
+</style>
+</head>
+<body>
+<div class="box">
+	<div class="box1">
+    	<div class="box-a qq clearfix">
+            <div class="box-a-a">
+                <p>YY游戏</p>
+                <span>WAN.YY.COU</span>
+            </div>
+            <span class="box-a-b"></span>
+            <div class="box-a-c">
+                <ul>
+                    <li><a href="#" class="box-a-c-a">登录</a></li>
+                    <li>|</li>
+                    <li><a href="#" class="box-a-c-a">登录</a></li>
+                    <li>|</li>
+                    <li><a href="#" class="box-a-c-a">登录</a></li>
+                    <li>|</li>
+                    <li><a href="#" class="box-a-c-b">登录</a></li>
+                </ul>
+            </div>
+    	</div>
+    </div>
+    <div class="box2">
+    	<div class="box-b qq clearfix">
+        	<div class="box-b-a">
+            	<div class="box-b-a-a">
+                	<p>YY游戏</p>
+                	<p>玩家社区</p>
+                </div>
+            </div>
+          	<div class="box-b-b">
+            	<ul>
+            		<li><a href="#">礼包中心</a></li>
+                	<li><a href="#">礼包中心</a></li>
+            		<li><a href="#">礼包中心</a></li>
+            	</ul>
+            </div>
+            <div class="box-b-c">
+            	<span>大多数风范股份</span>
+                <span>大多数风范股份</span>
+            </div>
+        </div>
+    </div>
+    <div class="box3">
+    	<div class="box-c qq clearfix">
+        	<div class="left-c">
+            	<div class="left-c-a">
+                	<a href="#"><img src="img/y5.jpg" alt="#"></a>
+                    <<span class="left-c-l"><i></i></span>
+                    <span class="left-c-r"><i></i></span>
+                </div>
+                <div class="left-c-b">
+                	<p>对方的身份的打发第三方</p>
+                </div>
+            </div>
+            <div class="right-c clearfix">
+            	<div class="right-c-a">
+                	<ul class="clearfix">
+                    	<li class="right-c-b"><a href="#">而非</a></li>
+                        <li><a href="#">好听</a></li>
+                        <li><a href="#">浮动</a></li>
+                        <li><a href="#">覆盖</a></li>
+                        <li><a href="#">回复</a></li>
+                    </ul>
+                </div>
+                <h3 class="right-c-c">的撒打算的撒是的撒旦撒旦法师打发师法</h3>
+                <div class="right-c-d">
+                	<ul>
+                    	<li><div class="right-c-e"><a href="#">[招募]</a>反对反对对方的发生发的啥地方的</div><span class="right-c-f">2000-00-00</span></li>
+                        <li><div class="right-c-e"><a href="#">[招募]</a>反对反对对方的发生发的啥地方的</div><span class="right-c-f">2000-00-00</span></li>
+                        <li><div class="right-c-e"><a href="#">[招募]</a>反对反对对方的发生发的啥地方的</div><span class="right-c-f">2000-00-00</span></li>
+                        <li><div class="right-c-e"><a href="#">[招募]</a>反对反对对方的发生发的啥地方的</div><span class="right-c-f">2000-00-00</span></li>
+                        <li><div class="right-c-e"><a href="#">[招募]</a>反对反对对方的发生发的啥地方的</div><span class="right-c-f">2000-00-00</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="box4">
+    	<div class="box-d qq">
+        	<div class="box-d-a">
+            	<div class="box-d-b clearfix">
+                	<h3>推荐工会</h3>
+                    <a href="#">更多+</a>
+                </div>
+            </div>
+            <ul class="box-d-c clearfix">
+            	<li class="box-d-c-w">
+                	<div class="box-d-c-a">
+                    	<img src="img/y9.jpg" alt="#">
+                        <div class="box-d-c-b clearfix">
+                        	<div class="box-d-c-c">
+                            
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-d-c-d">
+                    	<p>官方YY群：56461631</p>
+                        <a href="#">全部工会</a>
+                    </div>
+                </li>
+                <li class="box-d-c-w">
+                	<div class="box-d-c-a">
+                    	<img src="img/y9.jpg" alt="#">
+                    </div>
+                    <div class="box-d-c-d">
+                    	<p>官方YY群：56461631</p>
+                        <a href="#">全部工会</a>
+                    </div>
+                </li>
+                <li class="box-d-c-w">
+                	<div class="box-d-c-a">
+                    	<img src="img/y9.jpg" alt="#">
+                    </div>
+                    <div class="box-d-c-d">
+                    	<p>官方YY群：56461631</p>
+                        <a href="#">全部工会</a>
+                    </div>
+                </li>
+                <li class="box-d-c-w">
+                	<div class="box-d-c-a">
+                    	<img src="img/y9.jpg" alt="#">
+                    </div>
+                    <div class="box-d-c-d">
+                    	<p>官方YY群：56461631</p>
+                        <a href="#">全部工会</a>
+                    </div>
+                </li>
+                <li class="box-d-c-w">
+                	<div class="box-d-c-a">
+                    	<img src="img/y9.jpg" alt="#">
+                    </div>
+                    <div class="box-d-c-d">
+                    	<p>官方YY群：56461631</p>
+                        <a href="#">全部工会</a>
+                    </div>
+                </li>
+                <li class="box-d-c-w">
+                	<div class="box-d-c-a">
+                    	<img src="img/y9.jpg" alt="#">
+                    </div>
+                    <div class="box-d-c-d">
+                    	<p>官方YY群：56461631</p>
+                        <a href="#">全部工会</a>
+                    </div>
+                </li>
+                <li class="box-d-c-w">
+                	<div class="box-d-c-a">
+                    	<img src="img/y9.jpg" alt="#">
+                    </div>
+                    <div class="box-d-c-d">
+                    	<p>官方YY群：56461631</p>
+                        <a href="#">全部工会</a>
+                    </div>
+                </li>
+                <li class="box-d-c-w">
+                	<div class="box-d-c-a">
+                    	<img src="img/y9.jpg" alt="#">
+                    </div>
+                    <div class="box-d-c-d">
+                    	<p>官方YY群：56461631</p>
+                        <a href="#">全部工会</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="box5">
+    	<div class="box-e qq">
+        	<ul class="box-e-a clearfix">
+            	<li class="box-e-b ss">
+                	<div class="box-e-c">
+                    	<div class="box-e-k">
+                        	<div class="box-e-d clearfix">
+                            	<span>本周明星玩家：</span>
+                        		<p>梁静&amp;可耐甜心</p>
+                            	<a href="">更多+</a>
+                        	</div>
+                        </div>
+                        <div class="box-e-e clearfix">
+                        	<img src="img/y11.jpg" alt="#">
+                            <div class="box-e-f">
+                            	<p class="p1"><span>入驻游戏：</span>佛本是道</p>
+                                <p class="p1"><span>擅长职业：</span>高能法师</p>
+                                <p class="box-e-g">大幅度辅导辅导辅导费打发打发第三方的的范德萨发的发地方大幅度发打发打发第三对方的身份的辅导辅导辅导费第三方第三方第三方的的谁发的顺丰到付对方答复方第三方士大鬼地方个非官方大哥法规发个非官方夫地方大幅度发地方大幅度发地方大幅度发辅导辅导辅导大幅度发多少</p>
+                                <a href="#">查看详情</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="box-e-b-a ss">
+                	<div class="box-e-c">
+                    	<div class="box-e-k">
+                        	<div class="box-e-d clearfix">
+                        		<p>梁静&amp;可耐甜心</p>
+                            	<a href="">更多+</a>
+                        	</div>
+                        </div>
+                        <div class="box-e-e-a">
+                            <div class="box-e-f-a">
+                            	<p><span>[入驻游戏]</span>佛对方答复浮动本是道</p>
+                                <p><span>[擅长职业]</span>高能法地方地方大幅度师</p>
+                                <p><span>[擅长职业]</span>高能纷纷发顺丰法师</p>
+                                <p><span>[擅长职业]</span>高能的辅导辅导辅导费法师</p>
+                                <p><span>[擅长职业]</span>高能法飞凤飞飞师</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                 <li class="box-e-b-a ss">
+                	<div class="box-e-c">
+                    	<div class="box-e-k">
+                        	<div class="box-e-d clearfix">
+                        		<p>梁静&amp;可耐甜心</p>
+                            	<a href="">更多+</a>
+                        	</div>
+                        </div>
+                        <div class="box-e-e-a">
+                            <div class="box-e-f-a">
+                            	<p><span>[入驻游戏]</span>佛对方答复浮动本是道</p>
+                                <p><span>[擅长职业]</span>高能法地方地方大幅度师</p>
+                                <p><span>[擅长职业]</span>高能纷纷发顺丰法师</p>
+                                <p><span>[擅长职业]</span>高能的辅导辅导辅导费法师</p>
+                                <p><span>[擅长职业]</span>高能法飞凤飞飞师</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="box-e-b-b ss">
+                	<div class="box-e-c">
+                    	<div class="box-e-k">
+                        	<div class="box-e-d clearfix">
+                        		<p>梁静&amp;可耐甜心</p>
+                        	</div>
+                        </div>
+                        <div class="box-e-e-b">
+                            <div class="box-e-f-b">
+                            	<ul class="clearfix">
+                                	<li><img src="img/y12.jpg" alt="#"></li>
+                                    <li><img src="img/y12.jpg" alt="#"></li>
+                                    <li><img src="img/y12.jpg" alt="#"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="box-e-b-a ss">
+                	<div class="box-e-c">
+                    	<div class="box-e-k">
+                        	<div class="box-e-d clearfix">
+                        		<p>梁静&amp;可耐甜心</p>
+                        	</div>
+                        </div>
+                        <div class="box-e-e-a">
+                            <div class="box-e-f-a">
+                            	<p><span>[入驻游戏]</span>佛对方答复浮动本是道</p>
+                                <p><span>[擅长职业]</span>高能法地方地方大幅度师</p>
+                                <p><span>[擅长职业]</span>高能纷纷发顺丰法师</p>
+                                <p><span>[擅长职业]</span>高能的辅导辅导辅导费法师</p>
+                                <p><span>[擅长职业]</span>高能法飞凤飞飞师</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

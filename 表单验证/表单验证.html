@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title> </title>
+</head>
+<script>
+    window.onload=function(){
+        var aInput=document.getElementsByTagName('input')
+        var re=/^[1-9]\d{4,11}$/;
+        aInput[1].onclick=function(){
+            
+        if(re.test(aInput[0].value)){
+            alert("通过");
+        }
+        else{
+            alert("不通过");
+        }
+        }
+        
+        
+        var reg=/^[a-zA-Z\d_]{8,20}$/;
+        aInput[3].onclick=function(){
+            
+        if(reg.test(aInput[2].value)){
+            alert("通过");
+        }
+        else{
+            alert("不通过");
+        }
+        }
+        
+    }
+</script>
+<body>
+    <label for="username">账号</label>
+    <input type="text" id="username">
+    <input type="button" value="确认账号">
+    <label for="password">密码</label>
+    <input type="text" id="password">
+    <input type="button" value="确认密码">
+</body>
+</html>
