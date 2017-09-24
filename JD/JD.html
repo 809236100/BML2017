@@ -1,0 +1,2252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+        }
+        #side_box{
+            width: 35px;
+            height: 240px;
+            position: fixed;
+            right: 0px;
+            top:116px;
+            z-index: 2;
+            /*background: url("img/15-1侧边栏.jpg");*/
+        }
+        .side_box_{
+            display: inline-block;
+            border-radius: 5px;
+            margin-bottom: 1px;
+            width: 35px;
+            height: 35px;
+            cursor: pointer;
+        }
+        .side_box__{
+            display: inline-block;
+            width: 36px;
+            height: 36px;
+            border-radius: 5px;
+            margin-bottom: 2px;
+            background-color: #7a6e6e;
+        }
+        #side_box_box1{
+            background: url("img/sc3/wfzrwMLt4TQAAAAASUVORK5CYII=.png") no-repeat -48px 0px;
+        }
+        #side_box_box2{
+            background: url("img/sc3/wfzrwMLt4TQAAAAASUVORK5CYII=.png") no-repeat -48px -48px;
+        }
+        #side_box_box3{
+            background: url("img/sc3/wfzrwMLt4TQAAAAASUVORK5CYII=.png") no-repeat -48px -99px;
+        }
+        #side_box_box4{
+            background: url("img/sc3/wfzrwMLt4TQAAAAASUVORK5CYII=.png") no-repeat -49px -149px;
+        }
+        #side_box_box5{
+            background: url("img/sc3/wfzrwMLt4TQAAAAASUVORK5CYII=.png") no-repeat -86px -173px;
+        }
+        #side_box_box6{
+            background: url("img/sc3/wfzrwMLt4TQAAAAASUVORK5CYII=.png") no-repeat -187px -148px;
+        }
+        #side_box2_box1{
+            background: url("img/sc3/wfzrwMLt4TQAAAAASUVORK5CYII=.png") no-repeat -48px -248px;
+        }
+        #side_box2_box2{
+            background: url("img/sc3/wfzrwMLt4TQAAAAASUVORK5CYII=.png") no-repeat -48px -299px;
+        }
+        #side_box_under{
+            width: 64px;
+            height: 240px;
+            position: fixed;
+            right: -36px;
+            top:116px;
+            z-index: 1;
+        }
+        .side_box_under_{
+            position: relative;
+            font-size: 15px;
+            font-weight: 600;
+            text-align: center;
+            color: white;
+            height: 35px;
+            width: 64px;
+            background-color:  #7a6e6e;
+            margin-bottom: 5px;
+            border-radius: 5px;
+            line-height: 36px;
+        }
+        #side_box2{
+            width: 35px;
+            height: 80px;
+            position: fixed;
+            right: 0px;
+            bottom:70px;
+            z-index: 2;
+        }
+        #side_box_under2{
+            width: 35px;
+            height: 80px;
+            position: fixed;
+            right: 0px;
+            bottom:70px;
+            z-index: 1;
+        }
+        #all_box {
+            width: 1440px;
+            height: 2401px;
+            background-color: #F6F6F6;
+        }
+        #big_box {
+            display: block;
+            width: 1200px;
+            margin: 0 auto;
+        }
+        #top_box {
+            /*display: inline-block;*/
+            width: 1440px;
+            height: 30px;
+            background-color: #E3E4E5;
+            border-bottom: 1px solid #DDDDDD;
+        }
+        #top_ul {
+            display: block;
+            height: 30px;
+            width: 1200px;
+            margin: 0 auto;
+        }
+        #city {
+            font-size: 12px;
+            font-family: 微软雅黑;
+            color: #999999;
+            text-align: right;
+            display: inline-block;
+            width: 40px;
+            height: 18px;
+            margin-left: 210px;
+            background: url("img/02地点.png") no-repeat;
+        }
+        #ul_001 {
+            font-size: 12px;
+            font-family: 微软雅黑;
+            color: #999999;
+            list-style: none;
+            display: inline-block;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+        }
+        .ul_001_li {
+            display: inline-block;
+        }
+        .div_ul_li_a {
+            font-size: 12px;
+            font-family: 微软雅黑;
+            color: #999999;
+        }
+        #_red {
+            color: #F10215;
+        }
+        ._under {
+            text-align: left;
+            display: inline-block;
+            width: 65px;
+            background: url("img/03下拉.png") no-repeat right;
+        }
+        .text_li {
+            padding: 0 10px;
+        }
+        #first_li {
+            margin-left: 210px;
+        }
+        #box_001 {
+            height: 140px;
+            display: block;
+        }
+        #logo {
+            /*display:inline-block;    !??????????*/
+            float: left;
+            width: 190px;
+            height: 170px;
+            background-color: #fdfdfd;
+            /*position: relative;*/
+            margin-top: -30px;
+        }
+        #box_001_01 {
+            float: left;
+            margin-top: 25px;
+            height: 35px;
+            /*display: inline-block;    !?????????*/
+            width: 1000px;
+            margin-left: 10px;
+        }
+        #box_001_02 {
+            margin-top: 10px;
+            width: 1000px;
+            height: 70px;
+            float: left;
+        }
+        #input {
+            border: 2px solid red;
+            outline: none;
+            margin-left: 120px;
+            width: 500px;
+            height: 35px;
+            float: left;
+            color: #999999;
+        }
+        #input_btn {
+            display: inline-block;
+            width: 50px;
+            height: 35px;
+            position: relative;
+            left: -273px;
+            top: 2px;
+            background-color: red;
+        }
+        #btn_input {
+            display: inline-block;
+            width: 50px;
+            height: 35px;
+            background: url("img/06搜索.png") no-repeat 15px 8px;
+        }
+        #button_image {
+            /*margin-left: 31px;*/
+            float: left;
+            width: 190px;
+            height: 35px;
+            float: left;
+            text-align: center;
+            color: #F10215;
+            font-size: 12px;
+            background: url("img/07购物车.png") no-repeat 45px 8px;
+        }
+        #number {
+            display: inline-block;
+            width: 12px;
+            height: 14px;
+            background-color: red;
+            color: white;
+            text-align: center;
+            border-radius: 50%;
+            position: relative;
+            right: 115px;
+            top: -18px;
+        }
+        #div_p {
+            font-size: 12px;
+            line-height: 14px;
+        }
+        #btn_img {
+            text-align: center;
+            line-height: 35px;
+            background-color: white;
+            float: left;
+            margin-left: 31px;
+        }
+        #a_arr {
+            float: left;
+            width: 510px;
+            height: 20px;
+            margin-left: 130px;
+        }
+        #ul_002 {
+            margin-top: 0;
+            list-style: none;
+        }
+        .ul_002_li {
+            line-height: 20px;
+            font-size: 12px;
+            color: #999999;
+            display: inline-block;
+            height: 20px;
+            cursor: pointer;
+        }
+        .li_current {
+            color: #F10215;
+        }
+        #div_ul3 {
+            float: left;
+            position: relative;
+            margin-bottom: 12px;
+            margin-left: 40px;
+            height: 38px;
+            width: 1000px;
+        }
+        .ul3 {
+            list-style: none;
+            line-height: 50px;
+            display: inline-block;
+            font-family: 黑体;
+            font-size: 18px;
+            color: #333333;
+            font-weight: 500;
+        }
+        .div_ul3 {
+            display: inline-block;
+            margin: 3px;
+            cursor: pointer;
+        }
+        .div_ul3_ {
+            font-size: 12px;
+            display: inline-block;
+            color: #999999;
+        }
+        #jd08png {
+            display: inline-block;
+            position: absolute;
+            right: 40px;
+        }
+        #box_002 {
+            display: inline-block;
+            width: 1200px;
+            height: 480px;
+            /*background-color: #DDDDDD;*/
+        }
+        #left {
+            float: left;
+            width: 190px;
+            height: 480px;
+            background-color: #6E6568;
+        }
+        #left_ul {
+            margin-top: 24px;
+            margin-left: 12px;
+            /*list-style: none;*/
+        }
+        .left_ul_li {
+            display: block;
+            margin-bottom: 15px;
+            font-size: 14px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+        .left_ul_li a {
+            /*margin-bottom: 15px;*/
+            font-weight: 700;
+            font-size: 14px;
+            color: #ffffff;
+        }
+        #mid {
+            float: left;
+            margin-left: 10px;
+            width: 790px;
+            height: 480px;
+            /*background-color: antiquewhite;*/
+        }
+        #right {
+            width: 190px;
+            height: 480px;
+            float: left;
+            margin-left: 10px;
+            /*background-color: white;*/
+        }
+        #right_01 {
+            float: left;
+            width: 190px;
+            height: 115px;
+            background-color: #FFFFFF;
+        }
+        #head_photo_image {
+            margin-top: 5px;
+            display: inline-block;
+            width: 40px;
+            border-radius: 50%;
+        }
+        #head_photo_a {
+            text-align: center;
+            float: left;
+            width: 50px;
+            height: 50px;
+            background: url("img/09-1头像框.png") no-repeat -70px 0px;
+            margin-top: 15px;
+            margin-left: 15px;
+        }
+        #right_01_p {
+            margin-left: 10px;
+            margin-top: 20px;
+            float: left;
+            /*display: inline-block;*/
+            font-size: 12px;
+        }
+        .right_01_a_current {
+
+        }
+        .right_01_a {
+            margin-top: 5px;
+            margin-left: 10px;
+            margin-bottom: 15px;
+            float: left;
+            font-size: 12px;
+            text-decoration: none;
+            color: #666666;
+        }
+        .right_01_btn_current {
+
+        }
+        .right_01_btn {
+            margin-top: 5px;
+            margin-left: 5px;
+            font-size: 12px;
+            color: #E01222;
+            text-align: center;
+            line-height: 20px;
+            list-style: none;
+            display: inline-block;
+            width: 80px;
+            height: 20px;
+            border: 2px solid #E01222;
+        }
+        #right_02 {
+            float: left;
+            width: 190px;
+            height: 154px;
+            margin-top: 1px;
+            background-color: #FFFFFF;
+        }
+        #right_02_box_top {
+            height: 30px;
+            border-bottom: 1px solid #DDDDDD;
+        }
+        #right_02_ul {
+            height: 30px;
+            list-style: none;
+            padding: 0;
+        }
+        .right_02_ul_li {
+            line-height: 30px;
+            float: left;
+            font-size: 13px;
+        }
+        .right_02_ul_ {
+            color: #999999;
+        }
+
+        .right_02_ul_li_text {
+            text-align: center;
+            width: 50px;
+            color: #333333;
+            cursor: pointer;
+        }
+        #right_02_ul_li_a {
+            margin-left: 40px;
+            font-size: 12px;
+            text-decoration: none;
+            color: #666;
+        }
+        #right_02_box_buttom {
+
+        }
+        #right_02_box_buttom_news_list {
+            margin-left: 10px;
+            margin-top: 10px;
+            list-style: none;
+        }
+        .right_02_box_buttom_news_item {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .right_02_box_buttom_news_link {
+            text-decoration: none;
+            font-size: 12px;
+            color: #666;
+        }
+        #right_03 {
+            margin-top: 1px;
+            float: left;
+            width: 190px;
+            height: 209px;
+            background-color: #ffffff;
+        }
+        .right_03_ul {
+            padding: 0;
+            list-style: none;
+        }
+        .right_03_ul_li {
+            border: 1px solid #DDDDDD;
+            text-align: center;
+            line-height: 110px;
+            position: relative;
+            float: left;
+            width: 45px;
+            height: 69px;
+            font-size: 12px;
+            color: #666666;
+            cursor: pointer;
+        }
+        .right_03_ul_li_div {
+            display: inline-block;
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            top: 13px;
+            left: 10px;
+        }
+        #right_03_ul_li_div_01 {
+            background: url("img/10话费机票.png") no-repeat 0px 7px;
+        }
+        #right_03_ul_li_div_02 {
+            background: url("img/10话费机票.png") no-repeat -43px 7px;
+        }
+        #right_03_ul_li_div_03 {
+            background: url("img/10话费机票.png") no-repeat -131px 7px;
+        }
+        #right_03_ul_li_div_04 {
+            background: url("img/10话费机票.png") no-repeat -87px 7px;
+        }
+        #right_03_ul_li_div_05 {
+            background: url("img/10话费机票.png") no-repeat 0px -37px;
+        }
+        #right_03_ul_li_div_06 {
+            background: url("img/10话费机票.png") no-repeat -43px -37px;
+        }
+        #right_03_ul_li_div_07 {
+            background: url("img/10话费机票.png") no-repeat -87px -37px;
+        }
+        #right_03_ul_li_div_08 {
+            background: url("img/10话费机票.png") no-repeat -131px -37px;
+        }
+        #right_03_ul_li_div_09 {
+            background: url("img/10话费机票.png") no-repeat 0px -80px;
+        }
+        #right_03_ul_li_div_10 {
+            background: url("img/10话费机票.png") no-repeat -43px -80px;
+        }
+        #right_03_ul_li_div_11 {
+            background: url("img/10话费机票.png") no-repeat -87px -80px;
+        }
+        #right_03_ul_li_div_12 {
+            background: url("img/10话费机票.png") no-repeat -131px -80px;
+        }
+        #banner {
+            overflow: hidden;
+            position: relative;
+            width: 790px;
+            height: 340px;
+            /*background-color: #F10215;*/
+            float: left;
+        }
+        #ol_banner {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            line-height: 20px;
+            text-align: center;
+        }
+        #ol_banner li {
+            list-style: none;
+            float: left;
+            width: 20px;
+            height: 20px;
+            background: #DDDDDD;
+            border-radius: 50%;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        #banner #ol_banner li.current {
+            background-color: aquamarine;
+        }
+        #ul_banner {
+            position: absolute;
+            list-style: none;
+            display: inline-block;
+            /*overflow: hidden;*/
+            width: 900%;
+        }
+        .li_banner {
+            float: left;
+        }
+        #banner span {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: 50%;
+            margin-top: -20px;
+            background: #000;
+            cursor: pointer;
+            line-height: 40px;
+            text-align: center;
+            font-weight: bold;
+            font-family: '黑体';
+            font-size: 30px;
+            color: #fff;
+            opacity: 0.1;
+            border: 1px solid #fff;
+        }
+        #box_left {
+            left: 5px;
+        }
+        #box_right {
+            right: 5px;
+        }
+        #mid_one {
+            margin-top: 10px;
+            width: 390px;
+            height: 130px;
+            float: left;
+            /*background-color: #999999;*/
+        }
+        #mid_one_img {
+            display: inline-block;
+            width: 390px;
+            height: 130px;
+            background: url("img/banner/9.jpg");
+        }
+        #mid_two {
+            margin-left: 10px;
+            margin-top: 10px;
+            width: 390px;
+            height: 130px;
+            float: left;
+            /*background-color: #333333;*/
+        }
+        #mid_two_img {
+            display: inline-block;
+            width: 390px;
+            height: 130px;
+            background: url("img/banner/10.jpg");
+        }
+        #box_003 {
+            margin-top: 10px;
+            display: inline-block;
+            width: 1200px;
+        }
+        #box_003_topbox {
+            width: 1190px;
+            height: 55px;
+            background: url("img/12标题.png") no-repeat;
+        }
+        #box_003_topbox_corner {
+            float: left;
+            width: 20px;
+            height: 20px;
+            background: url("img/11-1角标阴影右指向符号等.png") no-repeat -194px -50px;
+        }
+        #box_003_topbox_img1 {
+            float: left;
+            height: 55px;
+            width: 35px;
+            background: url("img/11-1角标阴影右指向符号等.png") no-repeat 0px -32px;
+        }
+        #box_003_topbox_text {
+            float: left;
+            height: 55px;
+            width: 100px;
+            line-height: 55px;
+            text-align: center;
+            font-size: 22px;
+            font-weight: 600;
+            font-family: 方正兰亭超细黑简体;
+            color: #fff;
+            margin-left: 5px;
+        }
+        #box_003_topbox_text2 {
+            float: left;
+            height: 55px;
+            width: 120px;
+            line-height: 60px;
+            text-align: center;
+            font-size: 12px;
+            color: #fff;
+        }
+        #box_003_topbox_img2 {
+            float: left;
+            height: 20px;
+            width: 20px;
+            margin-top: 21px;
+            background: url("img/11-1角标阴影右指向符号等.png") no-repeat -152px -39px;
+        }
+        #box_003_topbox_timebox {
+            float: right;
+            height: 55px;
+            width: 260px;
+
+        }
+        #box_003_topbox_timebox_text1 {
+            height: 55px;
+            width: 55px;
+            float: left;
+            font-size: 12px;
+            color: #fff;
+            line-height: 65px;
+            text-align: center;
+        }
+        #box_003_topbox_timebox_ {
+            margin-top: 10px;
+            float: left;
+            color: #f90013;
+            width: 130px;
+            height: 37px;
+            font-size: 18px;
+            font-weight: 900;
+        }
+        .time_ {
+            line-height: 37px;
+            color: #440106;
+            float: left;
+        }
+        #time1 {
+            line-height: 37px;
+            text-align: center;
+            float: left;
+            width: 35px;
+            height: 37px;
+            background-color: #440106;
+            border-radius: 5px;
+        }
+        #time2 {
+            line-height: 37px;
+            text-align: center;
+            float: left;
+            width: 35px;
+            height: 37px;
+            background-color: #440106;
+            border-radius: 5px;
+        }
+        #time3 {
+            line-height: 37px;
+            text-align: center;
+            float: left;
+            width: 35px;
+            height: 37px;
+            background-color: #440106;
+            border-radius: 5px;
+        }
+        #box_003_topbox_timebox_text2 {
+            height: 55px;
+            width: 60px;
+            float: left;
+            font-size: 12px;
+            color: #fff;
+            line-height: 65px;
+            text-align: center;
+        }
+        #box_003_midbox {
+            height: 250px;
+            width: 1190px;
+            background-color: white;
+            overflow: hidden;
+        }
+        #box_003_topbox_ul {
+            margin-top: 12px;
+            list-style: none;
+            height: 225px;
+
+        }
+        .box_003_topbox_ul_li {
+            float: left;
+            height: 225px;
+            width: 197px;
+            border-right: 1px solid #DDDDDD;
+        }
+        .box_003_topbox_ul_li_img {
+            display: inline-block;
+            text-align: center;
+            width: 197px;
+            height: 140px;
+            background: url("img/11-1角标阴影右指向符号等.png") no-repeat 10px 120px;
+        }
+        .box_003_topbox_ul_li_text {
+            display: inline-block;
+            width: 197px;
+            height: 85px;
+            text-align: center;
+        }
+        .box_003_topbox_ul_li_p {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #999;
+        }
+        .box_003_topbox_ul_li_span_ {
+            margin-left: -50px;
+            font-size: 10px;
+            color: #F10214;
+        }
+        .box_003_topbox_ul_li_span1 {
+            font-size: 20px;
+            color: #F10214;
+        }
+        .box_003_topbox_ul_li_span2 {
+            font-size: 12px;
+            color: #999;
+            text-decoration: line-through;
+        }
+        #box_004 {
+            margin-top: 30px;
+            display: inline-block;
+            width: 1190px;
+            height: 445px;
+        }
+        #box_004_box1 {
+            display: inline-block;
+            width: 390px;
+            height: 445px;
+            background-color: white;
+        }
+        #box_004_box1_topbox {
+            width: 390px;
+            height: 55px;
+            background: url("img/京东_03.jpg");
+        }
+        #box_004_box1_midbox {
+            display: block;
+            width: 370px;
+            height: 390px;
+            background-color: #DDDDDD;
+            margin: 0 auto;
+        }
+        .box_004_box1_midbox_ul {
+            list-style: none;
+        }
+        .box_004_box1_midbox_ul_li {
+            float: left;
+            width: 184px;
+            height: 130px;
+            background-color: white;
+            margin-bottom: 2px;
+            position: relative;
+        }
+        .box_004_box1_midbox_ul_li_ {
+            margin-left: 2px;
+        }
+        .box_004_box1_midbox_ul_li_text {
+            float: left;
+            margin-top: 30px;
+            margin-left: 30px;
+            font-size: 14px;
+            color: #4998a1;
+        }
+        .box_004_box1_midbox_ul_li_img {
+            float: right;
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+            width: 80px;
+            height: 80px;
+        }
+        #box_004_box2 {
+            display: inline-block;
+            width: 390px;
+            height: 445px;
+            background-color: white;
+        }
+        #box_004_box2_topbox {
+            width: 390px;
+            height: 55px;
+            background: url("img/京东_05.jpg");
+        }
+        #box_004_box2_midbox {
+            display: block;
+            margin: 0 auto;
+            width: 370px;
+            height: 380px;
+            background-color: #DDDDDD;
+        }
+        .box_004_box2_midbox_ {
+            position: relative;
+            height: 190px;
+            width: 370px;
+            background-color: white;
+            margin-top: 1px;
+        }
+        .box_004_box2_midbox_text {
+            position: absolute;
+            top: 30px;
+            left: 26px;
+            float: left;
+            font-size: 12px;
+            color: #666;
+        }
+        .box_004_box2_midbox_img {
+            display: block;
+            height: 100px;
+            width: 370px;
+            margin-left: 10px;
+            bottom: 30px;
+            position: absolute;
+        }
+        .box_004_box2_midbox_img_ul {
+            list-style: none;
+
+        }
+        .box_004_box2_midbox_img_ul_li {
+            margin: 5px;
+            float: left;
+        }
+        #box_004_box3 {
+            display: inline-block;
+            width: 390px;
+            height: 445px;
+            background-color: white;
+        }
+        #box_004_box3_topbox {
+            width: 390px;
+            height: 55px;
+            background: url("img/京东_07.jpg");
+        }
+        #box_004_box3_midbox {
+            background-color: white;
+            width: 390px;
+            height: 390px;
+        }
+        #box_004_box3_midbox_ {
+            display: block;
+            width: 372px;
+            height: 375px;
+            margin: 0 auto;
+            background-color: #DDDDDD;
+        }
+        #box_004_box3_midbox_topbox {
+            text-align: center;
+            height: 31px;
+            width: 375px;
+            background-color: white;
+            margin-bottom: 1px;
+        }
+        #box_004_box3_midbox_topbox_ul {
+            list-style: none;
+        }
+        .box_004_box3_midbox_topbox_ul_li {
+            line-height: 31px;
+            font-size: 12px;
+            color: #666;
+            float: left;
+        }
+        .box_004_box3_midbox_topbox_ul_li_text {
+            cursor: pointer;
+            width: 68px;
+            height: 31px;
+        }
+        .box_004_box3_midbox_main_ul {
+            list-style: none;
+        }
+        .box_004_box3_midbox_main_ul_li {
+            height: 171px;
+            width: 123px;
+            float: left;
+            background-color: white;
+            margin-bottom: 1px;
+            margin-right: 1px;
+            position: relative;
+        }
+        .box_004_box3_midbox_main_ul_li_p {
+            font-size: 12px;
+            color: #666;
+            position: absolute;
+            left: 5px;
+            bottom: 10px;
+        }
+        .box_004_box3_midbox_main_ul_li_img {
+            position: absolute;
+            top: 20px;
+            left: 10px;
+        }
+        .box_004_box3_midbox_main_ul_li_img_num {
+            width: 50px;
+            height: 50px;
+            line-height: 45px;
+            text-align: center;
+            font-size: 25px;
+            font-weight: 700;
+            color: white;
+            display: inline-block;
+            position: absolute;
+            left: -8px;
+            top: -8px;
+            background: url("img/11-1角标阴影右指向符号等.png") no-repeat -90px -95px;
+        }
+        #box_004_box3_midbox_main_ul_li_img_num1 {
+            background: url("img/11-1角标阴影右指向符号等.png") no-repeat -94px -34px;
+        }
+        #box_004_box3_midbox_main_ul_li_img_num2 {
+
+            background: url("img/11-1角标阴影右指向符号等.png") no-repeat -40px -95px;
+        }
+        #box_004_box3_midbox_main_ul_li_img_num3 {
+
+            background: url("img/11-1角标阴影右指向符号等.png") no-repeat -43px -34px;
+        }
+        #box_005 {
+            margin-top: 30px;
+            width: 1190px;
+            height: 270px;
+        }
+        #box_005_box1 {
+            float: left;
+            width: 790px;
+            height: 270px;
+        }
+        #box_005_box1_topbox {
+            height: 55px;
+            background: url("img/京东_12.jpg");
+        }
+        #box_005_box1_midbox {
+            display: inline-block;
+            width: 790px;
+            height: 215px;
+            background-color: #DDDDDD;
+        }
+        #box_005_box1_midbox_ul {
+            list-style: none;
+        }
+        .box_005_box1_midbox_ul_li {
+            float: left;
+            width: 197px;
+            height: 215px;
+            background-color: white;
+            margin-right: 1px;
+            position: relative;
+        }
+        #box_005_box1_midbox_ul_li_last {
+            width: 196px;
+            margin-right: 0px;
+        }
+        .box_005_box1_midbox_ul_li_img1 {
+            width: 197px;
+            height: 215px;
+            float: left;
+        }
+        #box_005_box1_midbox_ul_li_img1 {
+            background: url("img/领券中心/1.jpg!q90.webp.jpg") no-repeat 47px 35px;
+        }
+        #box_005_box1_midbox_ul_li_img2 {
+            background: url("img/领券中心/2.jpg") no-repeat 47px 35px;
+        }
+        #box_005_box1_midbox_ul_li_img3 {
+            background: url("img/领券中心/3.jpg") no-repeat 47px 35px;
+        }
+        #box_005_box1_midbox_ul_li_img4 {
+            background: url("img/领券中心/4.png") no-repeat 47px 35px;
+        }
+        .box_005_box1_midbox_ul_li_img1_ {
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+        #box_005_box2 {
+            margin-left: 10px;
+            float: left;
+            width: 390px;
+            height: 270px;
+        }
+        #box_005_box2_topbox {
+            height: 55px;
+            background: url("img/京东_13.jpg");
+        }
+        #box_005_box2_midbox {
+            display: inline-block;
+            width: 390px;
+            height: 215px;
+            background-color: white;
+            position: relative;
+        }
+        #box_005_box2_midbox_img1 {
+            float: left;
+            height: 140px;
+            width: 200px;
+            margin-top: 25px;
+            margin-left: 30px;
+        }
+        .box_005_box2_midbox_text1 {
+            float: left;
+            width: 125px;
+            margin-left: 10px;
+            margin-top: 25px;
+            font-size: 14px;
+            color: #333333;
+            font-weight: 600;
+        }
+        .box_005_box2_midbox_text2 {
+            float: left;
+            width: 130px;
+            margin-left: 10px;
+            margin-top: 5px;
+            font-size: 12px;
+            color: #999;
+        }
+        .box_005_box2_midbox_text3 {
+            float: left;
+            width: 125px;
+            margin-left: 10px;
+            margin-top: 35px;
+            font-size: 12px;
+            color: #999;
+        }
+        #bottom_box {
+            /*height: ;*/
+            margin-top: 30px;
+        }
+        #bottom_box_box1_ {
+            height: 100px;
+            background-color: #e0e0e0;
+            border-bottom: 1px solid #d6d6d6;
+            margin-bottom: 30px;
+        }
+        #bottom_box_box1 {
+            height: 100px;
+            display: block;
+            width: 1188px;
+            margin: 0 auto;
+        }
+        #bottom_box_box1_ul {
+            list-style: none;
+        }
+        .bottom_box_box1_li {
+            float: left;
+        }
+        #bottom_box_box2_ {
+            height: 100px;
+            background-color: #eaeaea;
+            border-bottom: 1px solid #dadada;
+        }
+        #bottom_box_box2 {
+            width: 1190px;
+            display: block;
+            height: 42px;
+            margin: 0 auto;
+        }
+        #bottom_box_box2_ul {
+            list-style: none;
+        }
+        .bottom_box_box2_li {
+            width: 297px;
+            height: 100px;
+            float: left;
+        }
+        .bottom_box_box2_li_img {
+            display: block;
+            margin: 30px auto;
+        }
+        .mod_help {
+            background-color: #eaeaea;
+            padding: 20px 0;
+        }
+        .mod_help_list {
+            overflow: hidden;
+            padding-left: 200px;
+            height: 160px
+        }
+        .mod_help_nav {
+            float: left;
+            width: 198px;
+            line-height: 22px
+        }
+        .mod_help_nav_tit {
+            margin-bottom: 5px;
+            font-size: 14px
+        }
+        .mod_help_cover {
+            float: right;
+            padding-right: 200px;
+            width: 200px;
+            height: 150px;
+            background: url("img/素材补充2/TIM截图20170725140629.png") no-repeat 0 0;
+        }
+        .mod_help_cover_con {
+            padding: 0 10px;
+        }
+        .mod_help_nav {
+            width: 158px;
+        }
+        .mod_help_nav_con {
+            list-style: none;
+        }
+        .mod_help_nav_con a {
+            font-size: 12px;
+            color: #666666;
+        }
+        .mod_copyright {
+            background-color: #eaeaea;
+        }
+        .mod_copyright_inner {
+            padding: 15px 0;
+            border-top: 1px solid #e1e1e1;
+            text-align: center
+        }
+        .mod_copyright_split {
+            margin: 0 10px;
+            color: #ccc
+        }
+        .mod_copyright_info {
+            padding: 10px 0;
+            line-height: 22px;
+            color: #999
+        }
+        .mod_copyright_info a {
+            color: #999
+        }
+        .mod_copyright_auth_ico {
+            overflow: hidden;
+            display: inline-block;
+            margin: 0 3px;
+            width: 103px;
+            height: 32px;
+            /*background-image: url(//misc.360buyimg.com/mtd/pc/index/2.0.0/home/images/ico_footer.png);*/
+            line-height: 1000px
+        }
+        .mod_copyright_auth_ico_1 {
+            background-position: 0 -151px
+        }
+        .mod_copyright_auth_ico_2 {
+            background-position: -104px -151px
+        }
+        .mod_copyright_auth_ico_3 {
+            background-position: 0 -184px
+        }
+        .mod_copyright_auth_ico_4 {
+            background-position: -104px -184px
+        }
+        .mod_copyright_auth_ico_5 {
+            background-position: 0 -217px
+        }
+        .mod_copyright_auth_ico_6 {
+            background-position: -104px -217px
+        }
+        .mod_copyright_license {
+            margin-left: 16px
+        }
+        .o2_mini .mod_help_nav {
+            width: 158px
+        }
+        .o2_mini .mod_copyright_links .mod_copyright_split {
+            margin: 0 6px
+        }
+        .mod_copyright_links a{
+            font-size: 12px;
+            color: #666666;
+        }
+
+        .hide{
+            display: none;
+        }
+        #up_box1{
+            position: absolute;
+            width: 300px;
+            height: 200px;
+            background-color: white;
+            left: 815px;
+            top: 30px;
+            border: 2px solid #e1e1e1;
+            z-index: 5;
+            /*background: url("img/bg/40a3bf52d4721a967acbe1d9.jpg");*/
+        }
+        #up_box1_img{
+            height: 200px;
+        }
+        #up_box2{
+            position: absolute;
+            width: 200px;
+            height: 300px;
+            background-color: white;
+            left: 1067px;
+            top: 30px;
+            border: 2px solid #e1e1e1;
+            z-index: 5;
+            background: url("img/bg/1394804487.jpg");
+        }
+        #up_box2_img1{
+            width: 200px;
+        }
+        #up_box2_img2{
+            width: 200px;
+        }
+        #up_box3{
+            position: absolute;
+            width: 1190px;
+            height: 200px;
+            background-color: white;
+            left: 120px;
+            top: 30px;
+            border: 2px solid #e1e1e1;
+            z-index: 5;
+            background: url("img/bg/20131215125131_fvrNV.jpeg");
+        }
+        #up_box3_img{
+            height: 200px;
+        }
+        #QrCode_box{
+            position: absolute;
+            width: 68px;
+            height: 71px;
+            top:28px;
+            right: -35px;
+            cursor: pointer;
+        }
+        #QrCode_box_{
+            position: absolute;
+            width: 192px;
+            height: 313px;
+            top: 0px;
+            right: 0px;
+            z-index: 2;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>JD</title>
+</head>
+<body>
+    <div id="side_box">
+        <span class="side_box__">
+            <div class="side_box_" id="side_box_box1"></div>
+        </span>
+        <span class="side_box__">
+            <div class="side_box_" id="side_box_box2"></div>
+        </span>
+        <span class="side_box__">
+            <div class="side_box_" id="side_box_box3"></div>
+        </span>
+        <span class="side_box__">
+            <div class="side_box_" id="side_box_box4"></div>
+        </span>
+        <span class="side_box__">
+            <div class="side_box_" id="side_box_box5"></div>
+        </span>
+        <span class="side_box__">
+            <div class="side_box_" id="side_box_box6"></div>
+        </span>
+    </div>
+    <div id="side_box_under">
+        <div class="side_box_under_" id="side_box_under_box1">
+            <p>购物车</p>
+        </div>
+        <div class="side_box_under_" id="side_box_under_box2">
+            <p>我的关注</p>
+        </div>
+        <div class="side_box_under_" id="side_box_under_box3">
+            <p>我的足迹</p>
+        </div>
+        <div class="side_box_under_" id="side_box_under_box4">
+            <p>咨询JIMI</p>
+        </div>
+        <div class="side_box_under_" id="side_box_under_box5">
+            <p>京东会员</p>
+        </div>
+        <div class="side_box_under_" id="side_box_under_box6">
+            <p>我的消息</p>
+        </div>
+    </div>
+    <div id="side_box2">
+        <span class="side_box__">
+            <div class="side_box_" id="side_box2_box1"></div>
+        </span>
+        <span class="side_box__">
+            <div class="side_box_" id="side_box2_box2"></div>
+        </span>
+    </div>
+    <div id="side_box_under2">
+        <div class="side_box_under_" id="side_box2_under_box1">
+            <p>顶部</p>
+        </div>
+        <div class="side_box_under_" id="side_box2_under_box2">
+            <p>反馈</p>
+        </div>
+    </div>
+    <div id="all_box">
+        <div id="top_box">
+            <div id="top_ul">
+                <a href="#" id="city">北京</a>
+                <ul id="ul_001">
+                    <li class="text_li ul_001_li" id="first_li"><a href="#" class="div_ul_li_a">你好，请登录</a> <a href="#"
+                                                                                                              id="_red">免费注册</a>
+                    </li>
+                    <li class="ul_001_li"><span>|</span></li>
+                    <li class="text_li ul_001_li"><a href="#" class="div_ul_li_a">我的订单</a></li>
+                    <li class="ul_001_li"><span>|</span></li>
+                    <li class="text_li ul_001_li">
+                        <a href="#" class="_under div_ul_li_a">我的京东</a>
+                        <div id="up_box1" class="hide">
+                            <img src="img/bg/40a3bf52d4721a967acbe1d9.jpg" id="up_box1_img">
+                        </div>
+                    </li>
+                    <li class="ul_001_li"><span>|</span></li>
+                    <li class="text_li ul_001_li"><a href="#" class="div_ul_li_a">京东会员</a></li>
+                    <li class="ul_001_li"><span>|</span></li>
+                    <li class="text_li ul_001_li"><a href="#" class="div_ul_li_a">企业采购</a></li>
+                    <li class="ul_001_li"><span>|</span></li>
+                    <li class="text_li ul_001_li">
+                        <a href="#" class="_under div_ul_li_a">客户服务</a>
+                        <div id="up_box2" class="hide">
+                            <img src="img/bg/83.jpg" id="up_box2_img1">
+                            <img src="img/bg/9704BCAABE3A19B903ECDDD9FD84950E.jpg" id="up_box2_img2">
+                        </div>
+                    </li>
+                    <li class="ul_001_li"><span>|</span></li>
+                    <li class="text_li ul_001_li">
+                        <a href="#" class="_under div_ul_li_a">网站导航</a>
+                        <div id="up_box3" class="hide">
+                            <img src="img/bg/1394804487.jpg" id="up_box3_img">
+                        </div>
+                    </li>
+                    <li class="ul_001_li"><span>|</span></li>
+                    <li class="ul_001_li">手机京东</li>
+                </ul>
+            </div>
+        </div>
+        <div id="big_box">
+            <div id="QrCode_box">
+                <img src="img/04-1.png">
+                <div id="QrCode_box_" class="hide">
+                    <img src="img/04-2.png" >
+                </div>
+            </div>
+            <div id="box_001">
+                <form>
+                    <div id="logo">
+                        <img src="img/01logo.png" alt="京东">
+                    </div>
+                    <div id="box_001_01">
+                        <input type="text" id="input" value="婴幼儿奶粉">
+                        <div id="input_btn"><a href="#" id="btn_input"></a></div>
+                        <div id="number"><p id="div_p">0</p></div>
+                        <div id="btn_img"><a href="#" id="button_image">我的购物车</a></div>
+                    </div>
+                    <div id="box_001_02">
+                        <div id="a_arr">
+                            <ul id="ul_002">
+                                <li class="li_current ul_002_li">200减199</li>
+                                <li class="ul_002_li">直降2000</li>
+                                <li class="ul_002_li">满79减30</li>
+                                <li class="ul_002_li">京东泳装节</li>
+                                <li class="ul_002_li">3件8折</li>
+                                <li class="ul_002_li">扫描仪</li>
+                                <li class="ul_002_li">美容仪</li>
+                                <li class="ul_002_li">领199减100券</li>
+                                <li class="ul_002_li">乒乓球拍</li>
+                            </ul>
+                        </div>
+                        <div id="div_ul3">
+                            <ul id="ul3_01" class="ul3">
+                                <li class="div_ul3">秒杀</li>
+                                <li class="div_ul3">优惠券</li>
+                                <li class="div_ul3">闪购</li>
+                                <li class="div_ul3">拍卖</li>
+                            </ul>
+                            <ul id="ul3_02" class="ul3">
+                                <li class="div_ul3_">|</li>
+                                <li class="div_ul3">服装城</li>
+                                <li class="div_ul3">京东超市</li>
+                                <li class="div_ul3">生鲜</li>
+                                <li class="div_ul3">全球购</li>
+                            </ul>
+                            <ul id="ul3_03" class="ul3">
+                                <li class="div_ul3_">|</li>
+                                <li class="div_ul3">京东金融</li>
+                            </ul>
+                            <div id="jd08png">
+                                <img src="img/08.png" alt="京东扶贫">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div id="box_002">
+                <div id="left">
+                    <ul id="left_ul">
+                        <il class="left_ul_li"><a href="#">家用电器</a></il>
+                        <il class="left_ul_li"><a href="#">手机</a><span>/</span><a href="#">运营商</a><span>/</span><a href="#">数码</a>
+                        </il>
+                        <il class="left_ul_li"><a href="#">电脑</a><span>/</span><a href="#">办公</a></il>
+                        <il class="left_ul_li"><a href="#">居家</a><span>/</span><a href="#">家具</a><span>/</span><a href="#">家装</a><span>/</span><a
+                                href="#">厨具</a></il>
+                        <il class="left_ul_li"><a href="#">男装</a><span>/</span><a href="#">女装</a><span>/</span><a href="#">童装</a><span>/</span><a
+                                href="#">内衣</a></il>
+                        <il class="left_ul_li"><a href="#">美妆个护</a><span>/</span><a href="#">宠物</a></il>
+                        <il class="left_ul_li"><a href="#">女鞋</a><span>/</span><a href="#">箱包</a><span>/</span><a href="#">钟表</a><span>/</span><a
+                                href="#">珠宝</a></il>
+                        <il class="left_ul_li"><a href="#">男鞋</a><span>/</span><a href="#">运动</a><span>/</span><a href="#">户外</a>
+                        </il>
+                        <il class="left_ul_li"><a href="#">汽车</a><span>/</span><a href="#">汽车用品</a></il>
+                        <il class="left_ul_li"><a href="#">母婴</a><span>/</span><a href="#">玩具乐器</a></il>
+                        <il class="left_ul_li"><a href="#">食品</a><span>/</span><a href="#">酒类</a><span>/</span><a href="#">生鲜</a><span>/</span><a
+                                href="#">特产</a></il>
+                        <il class="left_ul_li"><a href="#">礼品鲜花</a><span>/</span><a href="#">农资绿植</a></il>
+                        <il class="left_ul_li"><a href="#">医药保健</a><span>/</span><a href="#">计生情趣</a></il>
+                        <il class="left_ul_li"><a href="#">图书</a><span>/</span><a href="#">音像</a><span>/</span><a href="#">电子书</a>
+                        </il>
+                        <il class="left_ul_li"><a href="#">机票</a><span>/</span><a href="#">酒店</a><span>/</span><a href="#">旅游</a><span>/</span><a
+                                href="#">生活</a></il>
+                        <il class="left_ul_li"><a href="#">理财</a><span>/</span><a href="#">众筹</a><span>/</span><a href="#">白条</a><span>/</span><a
+                                href="#">保险</a></il>
+                    </ul>
+                </div>
+                <div id="mid">
+                    <div id="banner">
+                        <ul id="ul_banner">
+                            <li class="li_banner"><img src="img/banner/b1.jpg"></li>
+                            <li class="li_banner"><img src="img/banner/b2.jpg"></li>
+                            <li class="li_banner"><img src="img/banner/b3.jpg"></li>
+                            <li class="li_banner"><img src="img/banner/b4.jpg"></li>
+                            <li class="li_banner"><img src="img/banner/b5.jpg"></li>
+                            <li class="li_banner"><img src="img/banner/b6.jpg"></li>
+                            <li class="li_banner"><img src="img/banner/b7.jpg"></li>
+                            <li class="li_banner"><img src="img/banner/b8.jpg"></li>
+                        </ul>
+                        <span id="box_left"><</span>
+                        <span id="box_right">></span>
+                        <ol id="ol_banner"></ol>
+                    </div>
+                    <div id="mid_double">
+                        <div id="mid_one">
+                            <a href="#" id="mid_one_img"></a>
+                        </div>
+                        <div id="mid_two">
+                            <a href="#" id="mid_two_img"></a>
+                        </div>
+                    </div>
+                </div>
+                <div id="right">
+                    <div id="right_01">
+                        <a href="#" id="head_photo_a"><img src="img/09-2头像.jpg" id="head_photo_image"></a>
+                        <p id="right_01_p">Hi,欢迎来到京...</p>
+                        <a href="#" class="right_01_a">登录</a>
+                        <a href="#" class="right_01_a">注册</a>
+                        <br><br>
+                        <a href="#" class="right_01_btn">新人福利</a>
+                        <a href="#" class="right_01_btn">PULS会员</a>
+                    </div>
+                    <div id="right_02">
+                        <div id="right_02_box_top">
+                            <ul id="right_02_ul">
+                                <li class="right_02_ul_li right_02_ul_li_text">促销</li>
+                                <li class="right_02_ul_li right_02_ul_">|</li>
+                                <li class="right_02_ul_li right_02_ul_li_text">公告</li>
+                                <li class="right_02_ul_li"><a href="#" id="right_02_ul_li_a">更多</a></li>
+                            </ul>
+                        </div>
+                        <div id="right_02_box_buttom">
+                            <ul id="right_02_box_buttom_news_list">
+                                <li class="right_02_box_buttom_news_item"><a href="#" class="right_02_box_buttom_news_link">家电狂欢领券最高减1500</a>
+                                </li>
+                                <li class="right_02_box_buttom_news_item"><a href="#" class="right_02_box_buttom_news_link">夏日必备低至9.9</a>
+                                </li>
+                                <li class="right_02_box_buttom_news_item"><a href="#" class="right_02_box_buttom_news_link">打开姨妈新世界</a>
+                                </li>
+                                <li class="right_02_box_buttom_news_item"><a href="#" class="right_02_box_buttom_news_link">每日享折扣
+                                    京东品质游</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="right_03">
+                        <ul class="right_03_ul">
+                            <li class="right_03_ul_li">
+                                <div class="right_03_ul_li_div" id="right_03_ul_li_div_01"></div>
+                                话费
+                            </li>
+                            <li class="right_03_ul_li">
+                                <div class="right_03_ul_li_div" id="right_03_ul_li_div_02"></div>
+                                机票
+                            </li>
+                            <li class="right_03_ul_li">
+                                <div class="right_03_ul_li_div" id="right_03_ul_li_div_03"></div>
+                                酒店
+                            </li>
+                            <li class="right_03_ul_li">
+                                <div class="right_03_ul_li_div" id="right_03_ul_li_div_04"></div>
+                                游戏
+                            </li>
+                        </ul>
+                        <ul class="right_03_ul">
+                            <li class="right_03_ul_li">
+                                <div class="right_03_ul_li_div" id="right_03_ul_li_div_05"></div>
+                                企业购
+                            </li>
+                            <li class="right_03_ul_li">
+                                <div class="right_03_ul_li_div" id="right_03_ul_li_div_06"></div>
+                                加油卡
+                            </li>
+                            <li class="right_03_ul_li">
+                                <div class="right_03_ul_li_div" id="right_03_ul_li_div_07"></div>
+                                电影票
+                            </li>
+                            <li class="right_03_ul_li">
+                                <div class="right_03_ul_li_div" id="right_03_ul_li_div_08"></div>
+                                火车票
+                            </li>
+                        </ul>
+                        <ul class="right_03_ul">
+                            <li class="right_03_ul_li">
+                                <div class="right_03_ul_li_div" id="right_03_ul_li_div_09"></div>
+                                众筹
+                            </li>
+                            <li class="right_03_ul_li">
+                                <div class="right_03_ul_li_div" id="right_03_ul_li_div_10"></div>
+                                理财
+                            </li>
+                            <li class="right_03_ul_li">
+                                <div class="right_03_ul_li_div" id="right_03_ul_li_div_11"></div>
+                                礼品卡
+                            </li>
+                            <li class="right_03_ul_li">
+                                <div class="right_03_ul_li_div" id="right_03_ul_li_div_12"></div>
+                                白条
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="box_003">
+                <div id="box_003_topbox">
+                    <div id="box_003_topbox_corner"></div>
+                    <div id="box_003_topbox_img1"></div>
+                    <div id="box_003_topbox_text"><p>京东秒杀</p></div>
+                    <div id="box_003_topbox_text2"><p>总有你想不到的低价</p></div>
+                    <div id="box_003_topbox_img2"></div>
+                    <div id="box_003_topbox_timebox">
+                        <div id="box_003_topbox_timebox_text1"><p>当前场次</p></div>
+                        <div id="box_003_topbox_timebox_">
+                            <div id="time1"><p>00</p></div>
+                            <p class="time_">:</p>
+                            <div id="time2"><p>30</p></div>
+                            <p class="time_">:</p>
+                            <div id="time3"><p>59</p></div>
+                        </div>
+                        <div id="box_003_topbox_timebox_text2"><p>后结束抢购</p></div>
+                    </div>
+                </div>
+                <div id="box_003_midbox">
+                    <ul id="box_003_topbox_ul">
+                        <li class="box_003_topbox_ul_li">
+                            <div class="box_003_topbox_ul_li_img">
+                                <img src="img/京东秒杀素材/1.jpg">
+                            </div>
+                            <div class="box_003_topbox_ul_li_text">
+                                <p class="box_003_topbox_ul_li_p">美国西北区巨无霸车厘子 1磅重（约450g）果径约30-32mm</p>
+                                <br>
+                                <span class="box_003_topbox_ul_li_span_">¥</span>
+                                <span class="box_003_topbox_ul_li_span1">39.90</span>
+                                <span class="box_003_topbox_ul_li_span2">¥89.90</span>
+                            </div>
+                        </li>
+                        <li class="box_003_topbox_ul_li">
+                            <div class="box_003_topbox_ul_li_img">
+                                <img src="img/京东秒杀素材/2.jpg">
+                            </div>
+                            <div class="box_003_topbox_ul_li_text">
+                                <p class="box_003_topbox_ul_li_p">美国西北区巨无霸车厘子 1磅重（约450g）果径约30-32mm</p>
+                                <br>
+                                <span class="box_003_topbox_ul_li_span_">¥</span>
+                                <span class="box_003_topbox_ul_li_span1">39.90</span>
+                                <span class="box_003_topbox_ul_li_span2">¥89.90</span>
+                            </div>
+                        </li>
+                        <li class="box_003_topbox_ul_li">
+                            <div class="box_003_topbox_ul_li_img">
+                                <img src="img/京东秒杀素材/3.jpg">
+                            </div>
+                            <div class="box_003_topbox_ul_li_text">
+                                <p class="box_003_topbox_ul_li_p">美国西北区巨无霸车厘子 1磅重（约450g）果径约30-32mm</p>
+                                <br>
+                                <span class="box_003_topbox_ul_li_span_">¥</span>
+                                <span class="box_003_topbox_ul_li_span1">39.90</span>
+                                <span class="box_003_topbox_ul_li_span2">¥89.90</span>
+                            </div>
+                        </li>
+                        <li class="box_003_topbox_ul_li">
+                            <div class="box_003_topbox_ul_li_img">
+                                <img src="img/京东秒杀素材/4.jpg">
+                            </div>
+                            <div class="box_003_topbox_ul_li_text">
+                                <p class="box_003_topbox_ul_li_p">美国西北区巨无霸车厘子 1磅重（约450g）果径约30-32mm</p>
+                                <br>
+                                <span class="box_003_topbox_ul_li_span_">¥</span>
+                                <span class="box_003_topbox_ul_li_span1">39.90</span>
+                                <span class="box_003_topbox_ul_li_span2">¥89.90</span>
+                            </div>
+                        </li>
+                        <li class="box_003_topbox_ul_li">
+                            <div class="box_003_topbox_ul_li_img">
+                                <img src="img/京东秒杀素材/5.png">
+                            </div>
+                            <div class="box_003_topbox_ul_li_text">
+                                <p class="box_003_topbox_ul_li_p">美国西北区巨无霸车厘子 1磅重（约450g）果径约30-32mm</p>
+                                <br>
+                                <span class="box_003_topbox_ul_li_span_">¥</span>
+                                <span class="box_003_topbox_ul_li_span1">39.90</span>
+                                <span class="box_003_topbox_ul_li_span2">¥89.90</span>
+                            </div>
+                        </li>
+                        <li class="box_003_topbox_ul_li">
+                            <div class="box_003_topbox_ul_li_img">
+                                <img src="img/京东秒杀素材/6.jpg">
+                            </div>
+                            <div class="box_003_topbox_ul_li_text">
+                                <p class="box_003_topbox_ul_li_p">美国西北区巨无霸车厘子 1磅重（约450g）果径约30-32mm</p>
+                                <br>
+                                <span class="box_003_topbox_ul_li_span_">¥</span>
+                                <span class="box_003_topbox_ul_li_span1">39.90</span>
+                                <span class="box_003_topbox_ul_li_span2">¥89.90</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="box_004">
+                <div id="box_004_box1">
+                    <div id="box_004_box1_topbox"></div>
+                    <div id="box_004_box1_midbox">
+                        <ul class="box_004_box1_midbox_ul">
+                            <li class="box_004_box1_midbox_ul_li">
+                                <div class="box_004_box1_midbox_ul_li_text">
+                                    <p>劲霸男短装</p>
+                                    <p>袖T恤</p>
+                                </div>
+                                <div class="box_004_box1_midbox_ul_li_img">
+                                    <img src="img/发现好货/1.jpg!q90.webp.jpg">
+                                </div>
+                            </li>
+                            <li class="box_004_box1_midbox_ul_li box_004_box1_midbox_ul_li_">
+                                <div class="box_004_box1_midbox_ul_li_text">
+                                    <p>劲霸男短装</p>
+                                    <p>袖T恤</p>
+                                </div>
+                                <div class="box_004_box1_midbox_ul_li_img">
+                                    <img src="img/发现好货/2.jpg!q90.webp.jpg">
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="box_004_box1_midbox_ul">
+                            <li class="box_004_box1_midbox_ul_li">
+                                <div class="box_004_box1_midbox_ul_li_text">
+                                    <p>劲霸男短装</p>
+                                    <p>袖T恤</p>
+                                </div>
+                                <div class="box_004_box1_midbox_ul_li_img">
+                                    <img src="img/发现好货/3.jpg!q90.webp.jpg">
+                                </div>
+                            </li>
+                            <li class="box_004_box1_midbox_ul_li box_004_box1_midbox_ul_li_">
+                                <div class="box_004_box1_midbox_ul_li_text">
+                                    <p>劲霸男短装</p>
+                                    <p>袖T恤</p>
+                                </div>
+                                <div class="box_004_box1_midbox_ul_li_img">
+                                    <img src="img/发现好货/4.jpg!q90.webp.jpg">
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="box_004_box1_midbox_ul">
+                            <li class="box_004_box1_midbox_ul_li">
+                                <div class="box_004_box1_midbox_ul_li_text">
+                                    <p>劲霸男短装</p>
+                                    <p>袖T恤</p>
+                                </div>
+                                <div class="box_004_box1_midbox_ul_li_img">
+                                    <img src="img/发现好货/5.jpg!q90.webp.jpg">
+                                </div>
+                            </li>
+                            <li class="box_004_box1_midbox_ul_li box_004_box1_midbox_ul_li_">
+                                <div class="box_004_box1_midbox_ul_li_text">
+                                    <p>劲霸男短装</p>
+                                    <p>袖T恤</p>
+                                </div>
+                                <div class="box_004_box1_midbox_ul_li_img">
+                                    <img src="img/发现好货/6.jpg!q90.webp.jpg">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="box_004_box2">
+                    <div id="box_004_box2_topbox"></div>
+                    <div id="box_004_box2_midbox">
+                        <div class="box_004_box2_midbox_">
+                            <div class="box_004_box2_midbox_text">
+                                <p>当天不买省电静音空调，活该你受罪又费钱</p>
+                            </div>
+                            <div class="box_004_box2_midbox_img">
+                                <ul class="box_004_box2_midbox_img_ul">
+                                    <li class="box_004_box2_midbox_img_ul_li"><img src="img/会买专辑/1.jpg"></li>
+                                    <li class="box_004_box2_midbox_img_ul_li"><img src="img/会买专辑/2.jpg"></li>
+                                    <li class="box_004_box2_midbox_img_ul_li"><img src="img/会买专辑/3.jpg"></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="box_004_box2_midbox_">
+                            <div class="box_004_box2_midbox_text">
+                                <p>给T恤加点戏，趣味印花的时髦不打烊</p>
+                            </div>
+                            <div class="box_004_box2_midbox_img">
+                                <ul class="box_004_box2_midbox_img_ul">
+                                    <li class="box_004_box2_midbox_img_ul_li"><img src="img/会买专辑/4.jpg"></li>
+                                    <li class="box_004_box2_midbox_img_ul_li"><img src="img/会买专辑/5.jpg"></li>
+                                    <li class="box_004_box2_midbox_img_ul_li"><img src="img/会买专辑/6.jpg"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="box_004_box3">
+                    <div id="box_004_box3_topbox"></div>
+                    <div id="box_004_box3_midbox">
+                        <div id="box_004_box3_midbox_">
+                            <div id="box_004_box3_midbox_topbox">
+                                <ul id="box_004_box3_midbox_topbox_ul">
+                                    <li class="box_004_box3_midbox_topbox_ul_li box_004_box3_midbox_topbox_ul_li_text">
+                                        手机通讯
+                                    </li>
+                                    <li class="box_004_box3_midbox_topbox_ul_li"><span>|</span></li>
+                                    <li class="box_004_box3_midbox_topbox_ul_li box_004_box3_midbox_topbox_ul_li_text">剃须刀
+                                    </li>
+                                    <li class="box_004_box3_midbox_topbox_ul_li"><span>|</span></li>
+                                    <li class="box_004_box3_midbox_topbox_ul_li box_004_box3_midbox_topbox_ul_li_text">大家电
+                                    </li>
+                                    <li class="box_004_box3_midbox_topbox_ul_li"><span>|</span></li>
+                                    <li class="box_004_box3_midbox_topbox_ul_li box_004_box3_midbox_topbox_ul_li_text">
+                                        休闲食品
+                                    </li>
+                                    <li class="box_004_box3_midbox_topbox_ul_li"><span>|</span></li>
+                                    <li class="box_004_box3_midbox_topbox_ul_li box_004_box3_midbox_topbox_ul_li_text">游戏本
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="box_004_box3_midbox_main">
+                                <ul class="box_004_box3_midbox_main_ul">
+                                    <li class="box_004_box3_midbox_main_ul_li">
+                                        <div class="box_004_box3_midbox_main_ul_li_img">
+                                            <div class="box_004_box3_midbox_main_ul_li_img_num"
+                                                 id="box_004_box3_midbox_main_ul_li_img_num1"><p>1</p></div>
+                                            <img src="img/排行榜/1.jpg!q90.webp.jpg">
+                                        </div>
+                                        <p class="box_004_box3_midbox_main_ul_li_p">小米 红米 4X 全网通版 2GB+16GB</p>
+                                    </li>
+                                    <li class="box_004_box3_midbox_main_ul_li">
+                                        <div class="box_004_box3_midbox_main_ul_li_img">
+                                            <div class="box_004_box3_midbox_main_ul_li_img_num"
+                                                 id="box_004_box3_midbox_main_ul_li_img_num2"><p>2</p></div>
+                                            <img src="img/排行榜/2.jpg!q90.webp.jpg">
+                                        </div>
+                                        <p class="box_004_box3_midbox_main_ul_li_p">小米 红米 4X 全网通版 2GB+16GB</p>
+                                    </li>
+                                    <li class="box_004_box3_midbox_main_ul_li">
+                                        <div class="box_004_box3_midbox_main_ul_li_img">
+                                            <div class="box_004_box3_midbox_main_ul_li_img_num"
+                                                 id="box_004_box3_midbox_main_ul_li_img_num3"><p>3</p></div>
+                                            <img src="img/排行榜/3.jpg!q90.webp.jpg">
+                                        </div>
+                                        <p class="box_004_box3_midbox_main_ul_li_p">小米 红米 4X 全网通版 2GB+16GB</p>
+                                    </li>
+                                </ul>
+                                <ul class="box_004_box3_midbox_main_ul">
+                                    <li class="box_004_box3_midbox_main_ul_li">
+                                        <div class="box_004_box3_midbox_main_ul_li_img">
+                                            <div class="box_004_box3_midbox_main_ul_li_img_num"><p>4</p></div>
+                                            <img src="img/排行榜/4.jpg!q90.webp.jpg">
+                                        </div>
+                                        <p class="box_004_box3_midbox_main_ul_li_p">小米 红米 4X 全网通版 2GB+16GB</p>
+                                    </li>
+                                    <li class="box_004_box3_midbox_main_ul_li">
+                                        <div class="box_004_box3_midbox_main_ul_li_img">
+                                            <div class="box_004_box3_midbox_main_ul_li_img_num"><p>5</p></div>
+                                            <img src="img/排行榜/5.jpg!q90.webp.jpg">
+                                        </div>
+                                        <p class="box_004_box3_midbox_main_ul_li_p">小米 红米 4X 全网通版 2GB+16GB</p>
+                                    </li>
+                                    <li class="box_004_box3_midbox_main_ul_li">
+                                        <div class="box_004_box3_midbox_main_ul_li_img">
+                                            <div class="box_004_box3_midbox_main_ul_li_img_num"><p>6</p></div>
+                                            <img src="img/排行榜/6.jpg!q90.webp.jpg">
+                                        </div>
+                                        <p class="box_004_box3_midbox_main_ul_li_p">小米 红米 4X 全网通版 2GB+16GB</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="box_005">
+                <div id="box_005_box1">
+                    <div id="box_005_box1_topbox">
+
+                    </div>
+                    <div id="box_005_box1_midbox">
+                        <ul id="box_005_box1_midbox_ul">
+                            <li class="box_005_box1_midbox_ul_li">
+                                <div class="box_005_box1_midbox_ul_li_img1" id="box_005_box1_midbox_ul_li_img1">
+                                    <img src="img/领券中心/q1.jpg" class="box_005_box1_midbox_ul_li_img1_">
+                                </div>
+                            </li>
+                            <li class="box_005_box1_midbox_ul_li">
+                                <div class="box_005_box1_midbox_ul_li_img1" id="box_005_box1_midbox_ul_li_img2">
+                                    <img src="img/领券中心/q2.jpg" class="box_005_box1_midbox_ul_li_img1_">
+                                </div>
+                            </li>
+                            <li class="box_005_box1_midbox_ul_li">
+                                <div class="box_005_box1_midbox_ul_li_img1" id="box_005_box1_midbox_ul_li_img3">
+                                    <img src="img/领券中心/q3.jpg" class="box_005_box1_midbox_ul_li_img1_">
+                                </div>
+                            </li>
+                            <li id="box_005_box1_midbox_ul_li_last" class="box_005_box1_midbox_ul_li">
+                                <div class="box_005_box1_midbox_ul_li_img1" id="box_005_box1_midbox_ul_li_img4">
+                                    <img src="img/领券中心/q4.jpg" class="box_005_box1_midbox_ul_li_img1_">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="box_005_box2">
+                    <div id="box_005_box2_topbox">
+
+                    </div>
+                    <div id="box_005_box2_midbox">
+                        <div id="box_005_box2_midbox_img1">
+                            <img src="img/14me素材.jpg">
+                        </div>
+                        <div class="box_005_box2_midbox_text1">
+                            <p>水桶腰大象腿？别怕！减肥达人一招制敌</p>
+                        </div>
+                        <div class="box_005_box2_midbox_text2">
+                            <span>水桶腰大象腿？别怕！减...</span>
+                            <a href="#">查看全文></a>
+                        </div>
+                        <div class="box_005_box2_midbox_text3">
+                            <p>47人看过</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="bottom_box">
+            <div id="bottom_box_box1_">
+                <div id="bottom_box_box1">
+                    <ul id="bottom_box_box1_ul">
+                        <li class="bottom_box_box1_li"><img src="img/页底/1.jpg"></li>
+                        <li class="bottom_box_box1_li"><img src="img/页底/2.jpg"></li>
+                        <li class="bottom_box_box1_li"><img src="img/页底/3.jpg"></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="bottom_box_box2_">
+                <div id="bottom_box_box2">
+                    <ul id="bottom_box_box2_ul">
+                        <li class="bottom_box_box2_li"><img class="bottom_box_box2_li_img" src="img/页底栏/1.jpg"></li>
+                        <li class="bottom_box_box2_li"><img class="bottom_box_box2_li_img" src="img/页底栏/2.jpg"></li>
+                        <li class="bottom_box_box2_li"><img class="bottom_box_box2_li_img" src="img/页底栏/3.jpg"></li>
+                        <li class="bottom_box_box2_li"><img class="bottom_box_box2_li_img" src="img/页底栏/4.jpg"></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="mod_help">
+                <div class="grid_c1 mod_help_inner">
+                    <div class="mod_help_list">
+                        <div class="mod_help_nav"><h5 class="mod_help_nav_tit">购物指南</h5>
+                            <ul class="mod_help_nav_con">
+                                <li><a href="#" target="_blank">购物流程</a></li>
+                                <li><a href="#" target="_blank">会员介绍</a></li>
+                                <li><a href="#" target="_blank">生活旅行</a></li>
+                                <li><a href="#" target="_blank">常见问题</a></li>
+                                <li><a href="#" target="_blank">大家电</a></li>
+                                <li><a href="#" target="_blank">联系客服</a></li>
+                            </ul>
+                        </div>
+                        <div class="mod_help_nav"><h5 class="mod_help_nav_tit">配送方式</h5>
+                            <ul class="mod_help_nav_con">
+                                <li><a href="#">上门自提</a></li>
+                                <li><a href="#">211限时达</a></li>
+                                <li><a href="#">配送服务查询</a></li>
+                                <li><a href="#">配送费收取标准</a></li>
+                                <li><a href="#">海外配送</a></li>
+                            </ul>
+                        </div>
+                        <div class="mod_help_nav"><h5 class="mod_help_nav_tit">支付方式</h5>
+                            <ul class="mod_help_nav_con">
+                                <li><a href="#">货到付款</a></li>
+                                <li><a href="#">在线支付</a></li>
+                                <li><a href="#">分期付款</a></li>
+                                <li><a href="#">邮局汇款</a></li>
+                                <li><a href="#">公司转账</a></li>
+                            </ul>
+                        </div>
+                        <div class="mod_help_nav"><h5 class="mod_help_nav_tit">售后服务</h5>
+                            <ul class="mod_help_nav_con">
+                                <li><a href="#">售后政策</a></li>
+                                <li><a href="#">价格保护</a></li>
+                                <li><a href="#">退款说明</a></li>
+                                <li><a href="#">返修/退换货</a></li>
+                                <li><a href="#">取消订单</a></li>
+                            </ul>
+                        </div>
+                        <div class="mod_help_nav"><h5 class="mod_help_nav_tit">特色服务</h5>
+                            <ul class="mod_help_nav_con">
+                                <li><a href="#">夺宝岛</a></li>
+                                <li><a href="#">DIY装机</a></li>
+                                <li><a href="#">延保服务</a></li>
+                                <li><a href="#">京东E卡</a></li>
+                                <li><a href="#">京东通信</a></li>
+                                <li><a href="#">京东JD+</a></li>
+                            </ul>
+                        </div>
+                        <div class="mod_help_cover"><!--<h5 class="mod_help_cover_tit">京东自营覆盖区县</h5>-->
+                            <div class="mod_help_cover_con">
+                                <!--<p class="mod_help_cover_info">京东已向全国2661个区县提供自营配送服务，支持货到付款、POS机刷卡和售后上门服务。</p>-->
+                                <!--<p class="mod_help_cover_more"><a href="#">查看详情</a></p>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="mod_copyright" clstag="h|keycount|2016|43">
+                <div class="grid_c1 mod_copyright_inner">
+                    <p class="mod_copyright_links">
+                        <a href="#">关于我们</a>
+                        <span class="mod_copyright_split">|</span><a href="#">联系我们</a>
+                        <span class="mod_copyright_split">|</span><a href="#">联系客服</a>
+                        <span class="mod_copyright_split">|</span><a href="#">合作招商</a>
+                        <span class="mod_copyright_split">|</span><a href="#">商家帮助</a>
+                        <span class="mod_copyright_split">|</span><a href="#">营销中心</a>
+                        <span class="mod_copyright_split">|</span><a href="#">手机京东</a>
+                        <span class="mod_copyright_split">|</span><a href="#">友情链接</a>
+                        <span class="mod_copyright_split">|</span><a href="#">销售联盟</a>
+                        <span class="mod_copyright_split">|</span><a href="#">京东社区</a>
+                        <span class="mod_copyright_split">|</span><a href="#">风险监测</a>
+                        <span class="mod_copyright_split">|</span><a href="#">隐私政策</a>
+                        <span class="mod_copyright_split">|</span><a href="#">京东公益</a>
+                        <span class="mod_copyright_split">|</span><a href="#">EnglishSite</a>
+                        <span class="mod_copyright_split">|</span><a href="#">Media&amp; IR</a>
+                    </p>
+                    <div class="mod_copyright_info"><p><a
+                            href="#">京公网安备 11000002000088号</a><span
+                            class="mod_copyright_split">|</span><span>京ICP证070359号</span><span
+                            class="mod_copyright_split">|</span><a
+                            href="#">互联网药品信息服务资格证编号(京)-经营性-2014-0008</a><span
+                            class="mod_copyright_split">|</span><span>新出发京零&nbsp;字第大120007号</span></p>
+                        <p><span>互联网出版许可证编号新出网证(京)字150号</span><span class="mod_copyright_split">|</span><a
+                                href="#">出版物经营许可证</a><span
+                                class="mod_copyright_split">|</span><a href="#">网络文化经营许可证京网文[2014]2148-348号</a><span
+                                class="mod_copyright_split">|</span><span>违法和不良信息举报电话：4006561155</span></p>
+                        <p><span>Copyright&nbsp;©&nbsp;2004&nbsp;-&nbsp;2017&nbsp;&nbsp;京东JD.com&nbsp;版权所有</span><span
+                                class="mod_copyright_split">|</span><span>消费者维权热线：4006067733</span><a href="#"
+                                                                                                      class="mod_copyright_license">经营证照</a>
+                        </p>
+                        <p><span>京东旗下网站：</span><a href="#">京东支付</a><span
+                                class="mod_copyright_split">|</span><a href="#">京东云</a>
+                        </p></div>
+                    <p class="mod_copyright_auth"><a class="mod_copyright_auth_ico mod_copyright_auth_ico_1"
+                                                     href="#">经营性网站备案中心</a><a
+                            class="mod_copyright_auth_ico mod_copyright_auth_ico_2"
+                            href="#">可信网站信用评估</a><a class="mod_copyright_auth_ico mod_copyright_auth_ico_3"
+                                                    href="#">网络警察提醒你</a><a
+                            class="mod_copyright_auth_ico mod_copyright_auth_ico_4"
+                            href="#">诚信网站</a><a
+                            class="mod_copyright_auth_ico mod_copyright_auth_ico_5"
+                            href="#">中国互联网举报中心</a><a
+                            class="mod_copyright_auth_ico mod_copyright_auth_ico_6"
+                            href="#">网络举报APP下载</a></p></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    var image_banner = document.getElementById("ul_banner");
+    var screen_banner = document.getElementById("banner");
+    var liArr_banner = image_banner.children;
+    var ol_banner = document.getElementById("ol_banner");
+    var li_arr_banner = [];
+    var right_banner = document.getElementById("box_right");
+    var left_banner = document.getElementById("box_left");
+    var count_banner = 0;
+    var timer_banner = null;
+    var run_timer_banner = null;
+    var li_new_banner = liArr_banner[0].cloneNode("ture");
+    var side_box_btnArr = document.getElementsByClassName("side_box_");
+    var side_box_textArr = document.getElementsByClassName("side_box_under_");
+    var up_box1 = document.getElementById("up_box1");
+    var up_box2 = document.getElementById("up_box2");
+    var up_box3 = document.getElementById("up_box3");
+    var up_box_btnArr = document.getElementsByClassName("_under div_ul_li_a");
+    var QrCode_box = document.getElementById("QrCode_box");
+    var QrCode_box_ = document.getElementById("QrCode_box_");
+    var text_liArr = document.getElementsByClassName("text_li");
+    var right_01_btnArr = document.getElementsByClassName("right_01_btn");
+
+    for(var i = 0 ; i < right_01_btnArr.length ; i++){
+        right_01_btnArr[i].onmousemove = function () {
+            this.style.backgroundColor = "red";
+            this.style.color = "white";
+        }
+        right_01_btnArr[i].onmouseout = function () {
+            this.style.backgroundColor = "white";
+            this.style.color = "red";
+        }
+    }
+
+    for(var i = 0 ; i < text_liArr.length ; i++){
+        text_liArr[i].index = i;
+        text_liArr[i].onmousemove = function () {
+            this.children[0].style.color = "red";
+        }
+        text_liArr[i].onmouseout = function () {
+            this.children[0].style.color = "#999999";
+        }
+    }
+
+
+    QrCode_box.onmousemove = function () {
+        QrCode_box_.className = "";
+    }
+    QrCode_box.onmouseout = function () {
+        QrCode_box_.className = "hide";
+    }
+//    for(var i = 0 ; i <up_box_btnArr.length ; i++){
+//        up_box_btnArr[i].parentNode.onmousemove = function () {
+//            this.style.backgroundColor = "white";
+//            up_box3.className = "";
+//        }
+//        up_box_btnArr[i].parentNode.onmouseout = function () {
+//            this.style.backgroundColor = "#e3e4e5";
+//            up_box3.className = "hide";
+//        }
+//    }
+    up_box_btnArr[0].parentNode.onmousemove = function () {
+        this.style.backgroundColor = "white";
+        up_box1.style.borderTopStyle = "none";
+        up_box1.className = "";
+    }
+    up_box_btnArr[0].parentNode.onmouseout = function () {
+        this.style.backgroundColor = "#e3e4e5";
+        up_box1.className = "hide";
+    }
+    up_box_btnArr[1].parentNode.onmousemove = function () {
+        this.style.backgroundColor = "white";
+        up_box2.style.borderTopStyle = "none";
+        up_box2.className = "";
+    }
+    up_box_btnArr[1].parentNode.onmouseout = function () {
+        this.style.backgroundColor = "#e3e4e5";
+        up_box2.className = "hide";
+    }
+    up_box_btnArr[2].parentNode.onmousemove = function () {
+        this.style.backgroundColor = "white";
+        up_box3.style.borderTopStyle = "none";
+        up_box3.className = "";
+    }
+    up_box_btnArr[2].parentNode.onmouseout = function () {
+        this.style.backgroundColor = "#e3e4e5";
+        up_box3.className = "hide";
+    }
+
+
+    for(var i = 0; i < side_box_btnArr.length ; i++){
+        side_box_btnArr[i].index = i;
+        side_box_btnArr[i].onmousemove =  function () {
+            clearInterval(side_box_textArr[this.index].timer);
+            side_box_textArr[this.index].style.backgroundColor = "red";
+            this.parentNode.style.backgroundColor = "red";
+            slow_fun( side_box_textArr[this.index] , -72);
+        }
+        side_box_btnArr[i].onmouseout =  function () {
+            clearInterval(side_box_textArr[this.index].timer);
+            side_box_textArr[this.index].style.backgroundColor = "#7a6e6e";
+            this.parentNode.style.backgroundColor = "#7a6e6e";
+            slow_fun( side_box_textArr[this.index] , 72);
+        }
+    }
+
+    function slow_fun( ele , value ) {
+        clearInterval(ele.timer);
+        ele.timer = setInterval(function () {
+            var speed = (value - ele.offsetLeft)/10;
+            speed = value > ele.offsetLeft ? Math.ceil(speed) : Math.floor(speed);
+            ele.style.left = ele.offsetLeft + speed  + "px";
+            if(Math.abs(value - ele.offsetLeft) <= Math.abs(speed)){
+                ele.style.left = value + "px";
+                clearInterval(ele.timer);
+            }
+        },30);
+    }
+
+
+
+    image_banner.appendChild(li_new_banner);
+    for (var i = 0; i < liArr_banner.length - 1; i++) {
+        var ol_li_banner = document.createElement("li");
+        ol_banner.appendChild(ol_li_banner);
+//        ol_li_banner.innerHTML = i + 1;
+        li_arr_banner[i] = ol_li_banner;
+    }
+    li_arr_banner[0].className = "current";
+    right_banner.onmousemove = function () {
+        this.style.opacity = 0.5;
+    }
+    right_banner.onmouseout = function () {
+        this.style.opacity = 0.1;
+    }
+    left_banner.onmousemove = function () {
+        this.style.opacity = 0.5;
+    }
+    left_banner.onmouseout = function () {
+        this.style.opacity = 0.1;
+    }
+    right_banner.onclick = function () {
+        auto_move();
+    }
+    left_banner.onclick = function () {
+        count_banner--;
+        if (count_banner < 0) {
+            image_banner.style.left = -li_arr_banner.length * screen_banner.offsetWidth + "px";
+            count_banner = li_arr_banner.length - 1;
+        }
+        fun(image_banner, -count_banner * screen_banner.offsetWidth);
+        for (var i = 0; i < li_arr_banner.length; i++) {
+            li_arr_banner[i].className = "";
+        }
+        li_arr_banner[count_banner].className = "current";
+    }
+    screen_banner.onmouseover = function () {
+        clearInterval(run_timer_banner);
+    }
+    screen_banner.onmouseout = function () {
+        run_timer_banner = setInterval(auto_move, 2000);
+    }
+    for (var i = 0; i < li_arr_banner.length; i++) {
+        li_arr_banner[i].index = i;
+        li_arr_banner[i].onmouseover = function () {
+            for (var j = 0; j < li_arr_banner.length; j++) {
+                li_arr_banner[j].className = "";
+            }
+            this.className = "current";
+            clearInterval(run_timer_banner);
+            count_banner = this.index;
+            fun(image_banner, -count_banner * screen_banner.offsetWidth);
+        }
+    }
+    run_timer_banner = setInterval(auto_move, 2000);
+
+    function auto_move() {
+        count_banner++;
+        if (count_banner > ( liArr_banner.length - 1)) {
+            count_banner = 1;
+            image_banner.style.left = "0px";
+        }
+        fun(image_banner, -count_banner * screen_banner.offsetWidth);
+
+        for (var i = 0; i < li_arr_banner.length; i++) {
+            li_arr_banner[i].className = "";
+        }
+        if (count_banner == 8) {
+            li_arr_banner[0].className = "current";
+        } else {
+            li_arr_banner[count_banner].className = "current";
+        }
+    }
+
+    function fun(ele, value) {
+        clearInterval(timer_banner);
+        var v = value > ele.offsetLeft ? 20 : -20;
+        timer_banner = setInterval(function () {
+            var tager = value - ele.offsetLeft;
+            ele.style.left = ele.offsetLeft + v + "px";
+            if (Math.abs(tager) < Math.abs(v)) {
+                ele.style.left = value + "px";
+                clearInterval(timer_banner);
+            }
+        }, 5);
+    }
+</script>
